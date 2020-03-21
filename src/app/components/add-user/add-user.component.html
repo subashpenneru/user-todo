@@ -1,0 +1,88 @@
+<div class="user-form">
+    <app-navbar></app-navbar>
+    <hr>
+    <form [formGroup]="userForm" (submit)="saveUser()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleInputFName">First Name</label>
+                        <input type="text" class="form-control" 
+                            id="exampleInputFName" placeholder="Enter first name"
+                            formControlName="fname" #fname>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleInputLName">Last Name</label>
+                        <input type="text" class="form-control" 
+                            id="exampleInputLName" placeholder="Enter last name"
+                            formControlName="lname" #lname>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" 
+                            id="exampleInputEmail1" placeholder="Enter email"
+                            formControlName="email" #email>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" 
+                            id="exampleInputPassword1" placeholder="Password"
+                            formControlName="pwd" #pwd>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleInputAge">Age</label>
+                        <input type="number" class="form-control" 
+                            id="exampleInputAge" placeholder="Enter age"
+                            formControlName="age" #age>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                    <button 
+                        [ngClass]="{'btn-disabled': !userForm.valid}"
+                        type="submit" class="btn btn-primary"
+                        [disabled]="!userForm.valid">Submit</button>
+                </div>
+                <div class="col-md-2 col-lg-3 col-xl-3"></div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<hr>
+
+<div class="user-list">
+    <app-show-users [userId]="userData"></app-show-users>
+</div>
+
+<div>
+    <app-footer></app-footer>
+</div>

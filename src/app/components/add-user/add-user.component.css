@@ -1,0 +1,7 @@
+.btn-disabled {
+    cursor: not-allowed;
+}
+
+.user-list {
+    margin-bottom: 100px;
+}

@@ -1,0 +1,17 @@
+.footer-color {
+    background: lightgrey;
+}
+
+.footer-link {
+    color: #007bff;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.footer-link:active {
+    color: rgb(245, 65, 65);
+}
